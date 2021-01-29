@@ -75,16 +75,23 @@ function printQuote () {
   let str = `<p class="quote">${quote.quote}</p>
   <p class="source">${quote.source}`;
   if (quote.citation) {
-    str += `<span class="citation">${quote.citation}</span>`
+    str += `<span class="citation">${quote.citation}</span>`;
   }
   if (quote.year) {
-    str += `<span class="year">${quote.year}</span>`
+    str += `<span class="year">${quote.year}</span>`;
   }
   str += `</p>`;
   if (quote.classes) {
-    str += `<p align="right">Teaches Peloton classes: ${quote.classes}</p>`
+    str += `<p align="right">Teaches Peloton classes: ${quote.classes}</p>`;
+  }
+  function randomBackgroundColor () {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
   }
   document.getElementById('quote-box').innerHTML = str; 
+  document.body.style.backgroundColor = randomBackgroundColor();
 }
 
 
