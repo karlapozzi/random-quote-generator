@@ -11,37 +11,45 @@ found on pinterest, fan blogs, and social media
 let quotes = [
   {
     quote: `Drop your shoulders, and drop your baggage.`,
-    source: `Christine D'Ercole`
+    source: `Christine D'Ercole`,
+    classes: `Cycle and Arms Toning`
   },
   {
     quote: `Are you ready? Yes or yes?`,
-    source: `Ally Love`
+    source: `Ally Love`, 
+    classes: `Cycle, Barre, and Dance Cardio`
   },
   {
     quote: `If Britney can get through 2007, you can get up this hill!`,
-    source: `Cody Rigsby`
+    source: `Cody Rigsby`,
+    classes: `Cycle and Bike Bootcamp`
   },
   {
     quote: `You are you and that is your superpower.`,
-    source: `Jess King`
+    source: `Jess King`,
+    classes: `Cycle and Tread`
   },
   {
     quote: `We eat fear for breakfast.`,
-    source: `Robin Arzon`
+    source: `Robin Arzón`,
+    classes: `Cycle, Tread, Bike Bootcamp, and Strength`
   }, 
   {
     quote: `If you can't be good, be careful.`,
-    source: `Denis Morton`
+    source: `Denis Morton`,
+    classes: `Cycle and Yoga`
   },
   {
     quote: `It's a good day to have a good day.`,
-    source: `Tunde Oyeneyin`
+    source: `Tunde Oyeneyin`,
+    classes: `Cycle and Bike Bootcamp`
   },
   {
-    quote: `It only takes one person to believe in you and that’s YOU‼️`,
+    quote: `It only takes one person to believe in you and that’s YOU!!`,
     source: `Alex Toussaint`,
     citation: `Instagram`,
-    year: `2021`
+    year: `2021`,
+    classes: `Cycle, Arms Toning, and Core`
   }
 ];
 
@@ -65,7 +73,7 @@ for the optional quote data.
 function printQuote () {
   let quote = getRandomQuote(quotes);
   let str = `<p class="quote">${quote.quote}</p>
-  <p class="source">${quote.source}`
+  <p class="source">${quote.source}`;
   if (quote.citation) {
     str += `<span class="citation">${quote.citation}</span>`
   }
@@ -73,6 +81,9 @@ function printQuote () {
     str += `<span class="year">${quote.year}</span>`
   }
   str += `</p>`;
+  if (quote.classes) {
+    str += `<p align="right">Teaches Peloton classes: ${quote.classes}</p>`
+  }
   document.getElementById('quote-box').innerHTML = str; 
 }
 
