@@ -79,11 +79,11 @@ function printQuote () {
   return str; 
 }
 
+document.getElementById('quote-box').innerHTML = printQuote(); 
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('quote-box').innerHTML = printQuote(); 
-
-// document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
