@@ -67,7 +67,7 @@ function getRandomQuote(arr) {
 
 /***
 A function that prints the HTML needed for quotes, including conditional statements 
-for the optional quote data. 
+for the optional quote data and a random background color. 
 ***/
 
 function printQuote () {
@@ -84,14 +84,10 @@ function printQuote () {
   if (quote.classes) {
     str += `<p align="right">Teaches Peloton classes: ${quote.classes}</p>`;
   }
-  function randomBackgroundColor () {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-  }
+  let colornum = () => Math.floor(Math.random() * 256);
+  let randomColor = `rgb(${colornum()}, ${colornum()}, ${colornum()})`;
   document.getElementById('quote-box').innerHTML = str; 
-  document.body.style.backgroundColor = randomBackgroundColor();
+  document.body.style.backgroundColor = randomColor;
 }
 
 
