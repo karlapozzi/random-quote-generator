@@ -3,15 +3,11 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
+/***
+An array of "famous" quotes from Peloton instructors 
+found on pinterest, fan blogs, and social media
 ***/
-
-//"Famous" quotes from Peloton instructors found on pinterest and fan blogs
 let quotes = [
   {
     quote: `Drop your shoulders, and drop your baggage.`,
@@ -51,10 +47,10 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+A function that generates a random number from 0 - the length of the quotes array, 
+then get the quote that corresponds to that number in the array. This lets you add 
+quotes without having to adjust anything else.
 ***/
-
-//Generate a random on number from 0 - the length of the quotes array, then get the corresponding quote
 function getRandomQuote(arr) {
   const randomNumber = Math.floor(Math.random() * arr.length);
   return arr[randomNumber];
@@ -62,7 +58,8 @@ function getRandomQuote(arr) {
 
 
 /***
- * `printQuote` function
+A function that prints the HTML needed for quotes, including conditional statements 
+for the optional quote data. 
 ***/
 
 function printQuote () {
@@ -80,10 +77,8 @@ function printQuote () {
 }
 
 
-
 /***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
+This runs the printQuote function each time the button's clicked. 
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
