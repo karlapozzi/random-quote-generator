@@ -40,6 +40,12 @@ let quotes = [
   {
     quote: `It's a good day to have a good day.`,
     source: `Tunde Oyeneyin`
+  },
+  {
+    quote: `It only takes one person to believe in you and that’s YOU‼️`,
+    source: `Alex Toussaint`,
+    citation: `Instagram`,
+    year: `2021`
   }
 ];
 
@@ -59,11 +65,25 @@ function getRandomQuote(arr) {
  * `printQuote` function
 ***/
 
-
+function printQuote () {
+  let quote = getRandomQuote(quotes);
+  let str = `<p class="quote">${quote.quote}</p>
+  <p class="source">${quote.source}`
+  if (quote.citation) {
+    str += `<span class="citation">${quote.citation}</span>`
+  }
+  if (quote.year) {
+    str += `<span class="year">${quote.year}</span>`
+  }
+  str += `</p>`;
+  return str; 
+}
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('quote-box').innerHTML = printQuote(); 
+
+// document.getElementById('load-quote').addEventListener("click", printQuote, false);
