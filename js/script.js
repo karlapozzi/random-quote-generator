@@ -76,10 +76,10 @@ function printQuote () {
     str += `<span class="year">${quote.year}</span>`
   }
   str += `</p>`;
-  return str; 
+  document.getElementById('quote-box').innerHTML = str; 
 }
 
-document.getElementById('quote-box').innerHTML = printQuote(); 
+
 
 /***
  * click event listener for the print quote button
