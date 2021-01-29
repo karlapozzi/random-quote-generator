@@ -12,7 +12,6 @@ project 1 - A Random Quote Generator
 ***/
 
 //"Famous" quotes from Peloton instructors found on pinterest and fan blogs
-
 let quotes = [
   {
     quote: `Drop your shoulders, and drop your baggage.`,
@@ -49,6 +48,11 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
+//Generate a random on number from 0 - the length of the quotes array, then get the corresponding quote
+function getRandomQuote(arr) {
+  const randomNumber = Math.floor(Math.random() * arr.length);
+  return arr[randomNumber];
+ }
 
 
 /***
