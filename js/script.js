@@ -90,9 +90,9 @@ function printQuote () {
   if (quote.classes) {
     str += `<p align="right"> Peloton instructor for ${quote.classes} classes</p>`;
   }
+  document.getElementById('quote-box').innerHTML = str;
   let colornum = () => Math.floor(Math.random() * 256);
   let randomColor = `rgb(${colornum()}, ${colornum()}, ${colornum()})`;
-  document.getElementById('quote-box').innerHTML = str; 
   document.body.style.backgroundColor = randomColor;
 }
 
