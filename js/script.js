@@ -96,6 +96,12 @@ function printQuote () {
 
 
 /***
+This automatically updates the quote every 10 seconds.  
+***/
+const changeQuote = setInterval(printQuote, 10000);
+
+
+/***
 This runs the printQuote function each time the button's clicked. 
 ***/
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
