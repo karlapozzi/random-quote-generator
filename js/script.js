@@ -86,7 +86,7 @@ function printQuote () {
   }
   str += `</p>`;
   if (quote.classes) {
-    str += `<p align="right">Teaches Peloton classes: ${quote.classes}</p>`;
+    str += `<p align="right"> Peloton instructor for ${quote.classes} classes</p>`;
   }
   let colornum = () => Math.floor(Math.random() * 256);
   let randomColor = `rgb(${colornum()}, ${colornum()}, ${colornum()})`;
