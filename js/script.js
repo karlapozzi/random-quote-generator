@@ -67,7 +67,11 @@ function getRandomQuote(arr) {
 
 /***
 A function that prints the HTML needed for quotes, including conditional statements 
-for the optional quote data and a random background color. 
+for the optional quote data and a random background color. Multiple google search
+results helped me figure out the document.body.style.backgroundColor part, 
+but especially these two articles: 
+https://www.tutorialrepublic.com/faq/how-to-change-the-background-color-of-a-web-page-using-javascript.php
+https://webplatform.github.io/docs/tutorials/manipulating_css_with_javascript/
 ***/
 
 function printQuote () {
