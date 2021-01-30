@@ -1,6 +1,8 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+Note: I am going for an Exceeds Expectations grade, but don't 
+mind if I pass with Meets expectations. 
 ******************************************/
 
 
