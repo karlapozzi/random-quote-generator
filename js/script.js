@@ -6,7 +6,8 @@ project 1 - A Random Quote Generator
 
 /***
 An array of "famous" quotes from Peloton instructors 
-found on pinterest, fan blogs, and social media
+found on pinterest, fan blogs, and social media. Classes property 
+notes which type of Peloton classes each instructor teaches. 
 ***/
 let quotes = [
   {
@@ -73,7 +74,6 @@ but especially these two articles:
 https://www.tutorialrepublic.com/faq/how-to-change-the-background-color-of-a-web-page-using-javascript.php
 https://webplatform.github.io/docs/tutorials/manipulating_css_with_javascript/
 ***/
-
 function printQuote () {
   let quote = getRandomQuote(quotes);
   let str = `<p class="quote">${quote.quote}</p>
@@ -98,5 +98,4 @@ function printQuote () {
 /***
 This runs the printQuote function each time the button's clicked. 
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
